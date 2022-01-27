@@ -1,0 +1,4 @@
+<h2>Players details</h2>
+<div *ngFor='let p of players'>
+    <p>Name : {{p.name | genderPipe : p.gender}}, Gender : {{p.gender}}</p>
+</div>

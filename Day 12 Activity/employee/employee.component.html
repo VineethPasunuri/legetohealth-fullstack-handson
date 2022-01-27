@@ -1,0 +1,15 @@
+<p>employee works!</p>
+<table class="table table-dark table-hover">
+
+        <tr>
+            <th>id</th>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <th>name</th>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <th>salary</th>
+
+        </tr>
+    <tr *ngFor='let e of employees'>
+        <td>{{e.id}}</td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <td>{{e.name}}</td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <td>{{e.salary}}</td>
+    </tr>
+</table>

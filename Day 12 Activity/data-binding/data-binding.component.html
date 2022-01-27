@@ -1,0 +1,14 @@
+<p>data-binding works!</p>
+<div>
+    <h1>Data Binding</h1>
+    <h2>Event Binding
+        UserName1 :{{username}} <br />
+    </h2>
+    <button (click)="handleClick()">MyButton</button><br />
+    <h2>UserName2 :{{username2}}</h2>
+    <input type="text" autocomplete="off" #un />
+    <button (click)="handleClick2(un.value)">MyButton2</button><br />
+    <div [hidden] = "toggleButton">Hidden</div>
+    <div>ToggleButton status : {{toggleButton}}</div>
+    <button [disabled]='toggleButton'>MyButton3</button>
+</div>
