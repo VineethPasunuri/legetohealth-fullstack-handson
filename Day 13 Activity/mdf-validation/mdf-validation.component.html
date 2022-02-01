@@ -1,0 +1,30 @@
+<div>
+    <h2>MDF Validation</h2>
+</div> 
+<hr />
+<form [formGroup]="profile" (ngSubmit)="handleSubmit()">
+    <div>
+        FirstName : <input type="text" formControlName="firstName" />
+        <span class="text-danger"
+            [hidden]="profile.controls['firstName'].valid ||profile.controls['firstName'].pristine">First Name must have
+            atleast 3 characters</span>
+    </div>
+    <div>
+        LastName : <input type="text" formControlName="lastName" />
+        <span class="text-danger"
+            [hidden]="profile.controls['lastName'].valid ||profile.controls['lastName'].pristine">Last Name must have
+            atleast 3 characters</span>
+    </div>
+    <div>
+        <input type="submit" value="Submit" [disabled]="profile.invalid" />
+    </div>
+</form>
+<div>
+    <h4>Form Values</h4>
+    <p>{{profile.value | json}}</p>
+    <p>Form is Valid : {{profile.valid}}</p>
+    <p>First Name is valid : {{profile.controls['firstName'].valid}}, Pristine is valid :
+        {{profile.controls['firstName'].pristine}}</p>
+    <p>Last Name is valid : {{profile.controls['lastName'].valid}}, Pristine is valid :
+        {{profile.controls['lastName'].pristine}}</p>
+</div>

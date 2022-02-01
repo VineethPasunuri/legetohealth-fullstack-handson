@@ -1,0 +1,21 @@
+<div>
+    <h2>MDF demo</h2>
+</div>
+<hr />
+<form [formGroup] = "profile" (ngSubmit)="handleSubmit()">
+    <div>
+        First Name :<input type="text" formControlName = "firstName" />
+    </div>
+    <div>
+        Last Name : <input type ="text" formControlName = "lastName" />
+    </div>
+    <div>
+        <input type ="submit" value= "submit" />
+    </div>
+    <div>
+        {{profile.value | json}}
+      <!-- <p> Form is Valid :  {{profile.valid}}</p>
+      <p>FirstName is Valid : {{profile.controls['firstName'].valid}}</p>
+      <p>Lastname is Valid : {{profile.controls['lastName'].valid}}</p> -->
+    </div>
+</form>
