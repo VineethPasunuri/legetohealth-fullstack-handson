@@ -1,0 +1,3 @@
+user:
+ message: Hello user this is development configuration
+ password: '{cipher}e28287eb74694a6a2d2557f928ca92f877ae2ee1fdceeab57385cafa8ed1f863'
